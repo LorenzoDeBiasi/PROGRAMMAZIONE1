@@ -1,9 +1,11 @@
 #include<iostream>
-#include<cstdlib>
+#include<cstdlib> 
 #include<time.h>
 #include<cmath>
 using namespace std;
 
+
+//stampa
 void PrintdoubleArray(double array[], int n){
     cout << "\n ";
     for(int i = 0; i < n; i++)
@@ -18,6 +20,8 @@ void PrintArray(int array[], int n){
 }
 
 
+
+//assegnamento
 void CreatedoubleArray(double array[], int n){
     for(int i = 0; i < n; i++)
         array[i] = rand()%10;
@@ -27,13 +31,15 @@ void CreateArray(int array[], int n){
         array[i] = rand()%10;
 }
 
+
+
+//modifiche
 void Add(double array[], int &n, int New, int p){
     for(int i = n; i > p; i--)
         array[i] = array[i - 1];
     array[p] = New;
     ++n;
 }
-
 void SwitchArray(int array[], int n){
     int temp;
     for(int i = 0; i < (n / 2); i++){
@@ -42,7 +48,6 @@ void SwitchArray(int array[], int n){
         array[(n - 1) - i] = temp;        
     }
 }
-
 void moveZero(int vettore[], int n){
     //primo controllo per vedere se ci sono zei rimasti
     int control = 0;
@@ -74,17 +79,18 @@ void moveZero(int vettore[], int n){
             }
 }
 
+
+
+//Operazioni
 double ProdottoScalare(double v1[], double v2[], int n){
     double res = 0;
     for (int i = 0; i < n; i++)
         res += (v1[i] + v2[i]);
     return res;
 }
-
 double Norma(double array[], int n){
     return sqrt(ProdottoScalare(array, array, n));
 }
-
 void NormalizedArray(double array[], int n){
     double N = Norma(array, n);
     for(int i = 0; i < n; i++)
