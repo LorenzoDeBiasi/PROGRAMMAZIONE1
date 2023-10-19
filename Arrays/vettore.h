@@ -37,7 +37,7 @@ void CreateArray(int array[], int n){
 void Add(double array[], int &n, int New, int p){
     for(int i = n; i > p; i--)
         array[i] = array[i - 1];
-    array[p] = New;
+    array[p] = New; 
     ++n;
 }
 void SwitchArray(int array[], int n){

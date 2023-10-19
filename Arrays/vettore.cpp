@@ -1,5 +1,6 @@
 #include<iostream>
 #include"vettore.h"
+#include"sorting.h"
 using namespace std;
 
 
@@ -14,10 +15,10 @@ int main(){
     {
         char choice;
         do{
-            cout << "\nWhat do you want to do: Give new value 'V'  Print 'P'  Switch 'S'  Move 0s at the end 'Z'\n";
+            cout << "\nWhat do you want to do:\n Give new value 'V'  Print 'P'  Sort 'Q'  Move 0s at the end 'Z' \n";
             cin  >> choice;  
         
-        } while( choice != 'V' && choice != 'P' && choice != 'S' && choice != 'Z' );
+        } while( choice != 'V' && choice != 'P' && choice != 'Q' && choice != 'Z' );
         
         
         //blocco per assegnare i valori al vettore
@@ -34,8 +35,8 @@ int main(){
 
 
         //blocco per invertire il vettore
-        if(choice == 'S')
-            SwitchArray(array, lenght);
+        if(choice == 'Q')
+            QuickSort(array, lenght);
 
         
         //blocco per spostare gli zeri alla fine
