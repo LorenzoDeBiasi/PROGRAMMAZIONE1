@@ -6,13 +6,13 @@ using namespace std;
 
 
 //stampa
-void PrintdoubleArray(double array[], int n){
+void PrintdoubleArray(const double array[], int n){
     cout << "\n ";
     for(int i = 0; i < n; i++)
         cout << "| " << array[i] << " |";
     cout << "\n";
 }
-void PrintArray(int array[], int n){
+void PrintArray(const int array[], int n){
     cout << "\n ";
     for(int i = 0; i < n; i++)
         cout << "| " << array[i] << " |";
@@ -34,12 +34,20 @@ void CreateArray(int array[], int n){
 
 
 //modifiche
-void Add(double array[], int &n, int New, int p){
+void Add(int array[], int &n, int New, int p){
+    if(p > n){
+        cout << "\ndimensione dell'array ecceduta\n";
+        return;
+    }
+
     for(int i = n; i > p; i--)
         array[i] = array[i - 1];
     array[p] = New; 
     ++n;
 }
+
+
+
 void SwitchArray(int array[], int n){
     int temp;
     for(int i = 0; i < (n / 2); i++){

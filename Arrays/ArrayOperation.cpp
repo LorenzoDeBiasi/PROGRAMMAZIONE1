@@ -9,12 +9,12 @@ using namespace std;
 int main(){
     int n;
     cin >> n;
-    double v1[n], v2[n];
+    int v1[n];
     srand(time(0));
-    CreatedoubleArray(v1, n);
+    CreateArray(v1, n);
     //CreatedoubleArray(v2, n);
 
-    PrintdoubleArray(v1, n);
+    PrintArray(v1, n);
     //PrintdoubleArray(v2, n);
 
     
@@ -34,5 +34,5 @@ int main(){
     */
 
    Add(v1, n, 11, (n / 2));
-   PrintdoubleArray(v1, n);
+   PrintArray(v1, n);
 }
