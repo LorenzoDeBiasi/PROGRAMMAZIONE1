@@ -2,6 +2,7 @@
 using namespace std;
 
 void BubbleSort(int v[], int n){
+    bool disordinato = true;
     for(int i = 1; i < n; i++)
         //blocco funzionale
         for(int j = 0; j < i; j++)
