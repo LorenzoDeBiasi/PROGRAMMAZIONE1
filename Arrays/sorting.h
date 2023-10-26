@@ -1,12 +1,16 @@
 #include<iostream>
 using namespace std;
 
-void BubbleSort(int a[], int n){
+void BubbleSort(int v[], int n){
     for(int i = 1; i < n; i++)
+        //blocco funzionale
         for(int j = 0; j < i; j++)
-            if( a[i] < a[j] )
-                swap(a[i], a[j]);                     
+            if( v[i] < v[j] )
+                swap(v[i], v[j]);          
 }
+
+
+
 //non l'ho fatto io
 int partition(int A[], int l, int r) {
     int i = l-1, j = r, v = A[r];

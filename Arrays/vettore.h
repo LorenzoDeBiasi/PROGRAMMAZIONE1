@@ -34,10 +34,6 @@ void CreateArray(int array[], int n){
 
 
 
-
-
-
-
 //modifiche
 void Add(int array[], int &n, int e, int p){
     if(p > n){
@@ -50,15 +46,6 @@ void Add(int array[], int &n, int e, int p){
     array[p] = e; 
     ++n;
 }
-
-
-
-
-
-
-
-
-
 void SwitchArray(int array[], int n){
     int temp;
     for(int i = 0; i < (n / 2); i++){
@@ -100,14 +87,28 @@ void moveZero(int vettore[], int n){
 
 
 
+//conversione binaria
+void INTtoBIN(int vettore[8], int n, int b){
+    for(int i = 0; i < 8; i++)
+        vettore[i] = 0;
 
+    if( (b != 2 && b != 8) || (n < 0 || n > (pow(b, 8) - 1)) )
 
-
-
-
-
-
-
+    if(b == 2 || b == 8){
+        for(int i = 7; i >= 0; i--){
+            if(n >= 0){
+                vettore[i] = n % b;
+                n /= b;
+            }
+            else return;
+        }
+    }
+    else{
+        cerr << "base inserita non idonea";
+        exit(0);
+    }
+        
+}
 
 
 //Operazioni
