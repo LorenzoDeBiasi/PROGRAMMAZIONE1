@@ -1,0 +1,3 @@
+1: La Madonna è puttana? a-si           b-no            c-forse         d-diocan        e-tu
+2: E Dio invece?         a-si           b-anca massa    c-no tu si      d-no è un cane  e-porcodio
+3: Come ti chiami?       a-Oreste       b-Roberto       c-Dio           d-PorcoDio      e-Gianmaria

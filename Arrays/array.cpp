@@ -1,6 +1,7 @@
 #include<iostream>
 #include"vettore.h"
 #include"sorting.h"
+#include"searching.h"
 using namespace std;
 
 
@@ -15,10 +16,11 @@ int main(){
     {
         char choice;
         do{
-            cout << "\nWhat do you want to do:\nGive new value 'V'  Print 'P'  Switch 'S'  Sort 'B'  Move 0s at the end 'Z'  Convert n 'C'\n";
+            cout << "\nWhat do you want to do:\n";
+            cout << "Give new value 'V'  Print 'P'  Switch 'S'  Sort 'B'  Move 0s at the end 'Z'  Convert a number'C'  find an element 'F'\n";
             cin  >> choice;  
         
-        } while( choice != 'V' && choice != 'P' && choice != 'S' && choice != 'B' && choice != 'Z'  && choice != 'C');
+        } while( choice != 'V' && choice != 'P' && choice != 'S' && choice != 'B' && choice != 'Z'  && choice != 'C' && choice != 'F');
         
         
         //blocco per assegnare i valori al vettore
@@ -46,6 +48,8 @@ int main(){
         if(choice == 'Z')
             moveZero(array, lenght);
 
+
+        //blocco per convertire un numero in base 2 o 8
         if(choice == 'C'){
             int n, b;
             do{
@@ -56,6 +60,15 @@ int main(){
             INTtoBIN(array, n, b);
         }
 
+        //blocco per cercare la presenza di un numero nell'array
+        if(choice == 'F'){
+            int n;
+            do{
+                cout << "\nDimmi un numero (tra 0 e 9): ";
+                cin >> n;
+            }while(n < 0 || n > 9);
+            cout << n << " si trova in posizione " << RicercaBinaria(array, n, lenght - 1) << endl;
+        }
 
     } while (true);
 }

@@ -1,4 +1,6 @@
 #include"vettore.h"
+#include"sorting.h"
+#include"searching.h"
 #include<iostream>
 #include<cstdlib>
 #include<time.h>

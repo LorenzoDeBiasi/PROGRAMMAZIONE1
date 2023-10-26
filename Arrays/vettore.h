@@ -91,10 +91,7 @@ void moveZero(int vettore[], int n){
 void INTtoBIN(int vettore[8], int n, int b){
     for(int i = 0; i < 8; i++)
         vettore[i] = 0;
-
-    if( (b != 2 && b != 8) || (n < 0 || n > (pow(b, 8) - 1)) )
-
-    if(b == 2 || b == 8){
+    if(b == 2 || b == 8)
         for(int i = 7; i >= 0; i--){
             if(n >= 0){
                 vettore[i] = n % b;
@@ -102,12 +99,10 @@ void INTtoBIN(int vettore[8], int n, int b){
             }
             else return;
         }
-    }
     else{
         cerr << "base inserita non idonea";
         exit(0);
-    }
-        
+    } 
 }
 
 
