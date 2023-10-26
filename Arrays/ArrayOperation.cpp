@@ -7,15 +7,29 @@ using namespace std;
 
 
 int main(){
-    int n;
+    int n, e, p;
     cin >> n;
-    int v1[n];
-    srand(time(0));
-    CreateArray(v1, n);
-    //CreatedoubleArray(v2, n);
+    double v1[n];
 
+    
+    CreatedoubleArray(v1, n); 
+    PrintdoubleArray(v1, n);
+    /*
+    cout << "\ninserisci un nuovo elemento e la sua posizione: \n";
+    cin >> e >> p;
+
+    Add(v1, n, e, p);
     PrintArray(v1, n);
-    //PrintdoubleArray(v2, n);
+    */
+
+
+
+
+
+
+
+
+   //PrintdoubleArray(v2, n);
 
     
     
@@ -28,11 +42,9 @@ int main(){
 
 
     
-    /*cout << "\nLa norma di v1 è: " << Norma(v1, n) << "\nmentre il vettore normalizzato diventa: \n";
+    cout << "\nLa norma di v1 è: " << Norma(v1, n) << "\nmentre il vettore normalizzato diventa: \n";
     NormalizedArray(v1, n);
     PrintdoubleArray(v1, n);
-    */
+    
 
-   Add(v1, n, 11, (n / 2));
-   PrintArray(v1, n);
 }

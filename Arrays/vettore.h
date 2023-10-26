@@ -33,8 +33,13 @@ void CreateArray(int array[], int n){
 
 
 
+
+
+
+
+
 //modifiche
-void Add(int array[], int &n, int New, int p){
+void Add(int array[], int &n, int e, int p){
     if(p > n){
         cout << "\ndimensione dell'array ecceduta\n";
         return;
@@ -42,9 +47,15 @@ void Add(int array[], int &n, int New, int p){
 
     for(int i = n; i > p; i--)
         array[i] = array[i - 1];
-    array[p] = New; 
+    array[p] = e; 
     ++n;
 }
+
+
+
+
+
+
 
 
 
@@ -89,11 +100,21 @@ void moveZero(int vettore[], int n){
 
 
 
+
+
+
+
+
+
+
+
+
+
 //Operazioni
 double ProdottoScalare(double v1[], double v2[], int n){
     double res = 0;
     for (int i = 0; i < n; i++)
-        res += (v1[i] + v2[i]);
+        res += (v1[i] * v2[i]);
     return res;
 }
 double Norma(double array[], int n){
