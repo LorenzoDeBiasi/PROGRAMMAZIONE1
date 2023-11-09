@@ -116,6 +116,10 @@ int main(){
     StampaQuadrata(msqr);
     cout << "\nLa somma del triangolo superiore e': " << SommaTriSup(msqr) << "\n";
     */
+
+    
+
+
     int m[q][q];
     InizializzaQuadrata(m);
     StampaQuadrata(m);

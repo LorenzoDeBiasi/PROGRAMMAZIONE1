@@ -6,7 +6,7 @@ using namespace std;
 
 
 
-bool grep(char * stringa, fstream * file){
+bool grep(char* stringa, fstream* file){
     //controllo non ci siano errori nello stream
     if((*file).fail()){
         std::cerr << "Errore";
@@ -27,7 +27,7 @@ bool grep(char * stringa, fstream * file){
 
 
 //devo verificare che una certa stringa sia presente in uno o più file
-int main (int argc, char * argv[]){
+int main (int argc, char* argv[]){
     //controllo che i parametri in entrata siano in numero corretto (nome eseguibile, stringa, nome file)
     if(argc < 3){
         std::cerr << "Digitare (file.out) (stringa ricercata) (file.txt) \n";
