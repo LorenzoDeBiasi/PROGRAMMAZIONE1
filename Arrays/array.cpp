@@ -41,13 +41,12 @@ int main(){
 
         //blocco per ordinare il vettore
         if(choice == 'B')
-            BubbleSort(array, lenght);
+            QuickSort(array, lenght);
 
         
         //blocco per spostare gli zeri alla fine
         if(choice == 'Z')
             moveZero(array, lenght);
-
 
         //blocco per convertire un numero in base 2 o 8
         if(choice == 'C'){
