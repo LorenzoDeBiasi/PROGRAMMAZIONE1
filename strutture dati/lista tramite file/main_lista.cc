@@ -23,14 +23,10 @@ int main(int argc, char* argv[]){
     x->next = NULL; 
 
     while(!file.eof()){
-        node tmp = new node_ls;
-        
         char ns[10];
         file >> ns;
-
-        tmp->value = atoi(ns);
-        tmp->next = NULL;
-        insert_node(x, tmp);
+        int v = atoi(ns);
+        insert_first(x, v);
     }
 
     print(x);
