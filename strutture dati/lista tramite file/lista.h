@@ -10,11 +10,23 @@ struct node_ls{
 };
 
 
-int length(node s);
-void insert_first(node &s, int v);
+
+
+void insert_first(node &x, int v);
+void insert_last(node &x, int n);
 void insert_node(node x, node t);
-void remove_first(node & s);
-void insert_last(node & p, int n);
-void print(node const p);
+
+void remove_first(node &x);
+void search_remove(node &x, int val);
+
+void print(node const x);
+void reverse_print(node const x);
+
 void deinit(node x);
+
+int length(node x);
+node primizzaLista(node &x);
+
+
+
 #endif
