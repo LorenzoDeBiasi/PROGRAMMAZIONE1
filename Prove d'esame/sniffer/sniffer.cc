@@ -1,6 +1,7 @@
 #include<iostream>
 #include<fstream>
 using namespace std;
+#define MAX_DIM 16
 
 bool isdigit(char str[5])       { return atoi(str); }
 
@@ -12,7 +13,7 @@ int main(int argc, char* argv[]){
     //controllo stream
     if(input.fail()){ cout << "\nERROR: stream not opened properly\n";    exit(0); }
 
-    char str[5];    bool keep = true;    int i = 0;     int counter = 0;
+    char str[MAX_DIM];    bool keep = true;    int i = 0;     int counter = 0;
     while(input >> str){
         do{ 
             str[4] = '\0';
