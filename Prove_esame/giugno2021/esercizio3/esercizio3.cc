@@ -117,7 +117,7 @@ albero creaAlberoDiRicercaBinario(albero t){
     //creo una lista con gli elementi dispari necessari
     list* l = NULL;
     crea_list(t, l);
-/*    for(list* tmp = l; tmp != NULL; tmp = tmp->next){
+    for(list* tmp = l; tmp != NULL; tmp = tmp->next){
         for(list* tmp2 = l; tmp2 != tmp; tmp2 = tmp2->next)
             if(tmp->value < tmp2->value){
                 int t = tmp->value;
@@ -125,7 +125,7 @@ albero creaAlberoDiRicercaBinario(albero t){
                 tmp2->value = t;
             }
     }
-*/
+
     albero trb = NULL;
     trb = creaAlberoDiRicercaBinario_aux(trb, l);
     return trb;
