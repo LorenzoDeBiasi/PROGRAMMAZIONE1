@@ -113,19 +113,16 @@ void estrai_aux(tree* t, list* &l){
         if(t->info % 2 == 0)
             l = new list {t->info, l};
     }
-    
     else if(t->left == NULL){
         if(t->info % 2 == 0)
             l = new list {t->info, l};
         estrai_aux(t->right, l);
     }
-    
     else if(t->right == NULL){
         if(t->info % 2 == 0)
             l = new list {t->info, l};
         estrai_aux(t->left, l);
-    }
-    
+    }    
     else{
         if(t->info % 2 == 0)
             l = new list {t->info, l};
